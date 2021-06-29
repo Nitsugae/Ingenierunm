@@ -1,0 +1,33 @@
+{
+    "noticias": [{
+            "titulo": "Robot Garfield",
+            "subtitulo": "aguante robot Garfield",
+            "cuerpo": "",
+            "fecha": "",
+            "imagenes": ["https://i.redd.it/462ki8kafd651.jpg"],
+            "epigrafes": [],
+            "autores": [],
+            "categorias": []
+        },
+        {
+            "titulo": "El sabor guaraná es un invento de la CIA",
+            "subtitulo": "fuente: Universidad del Triangulo de las vermudas",
+            "cuerpo": "",
+            "fecha": "",
+            "imagenes": ["https://www.axahealthkeeper.com/wp-content/uploads/2019/08/Guarana-propiedades-y-contraindicaciones.jpg"],
+            "epigrafes": [],
+            "autores": [],
+            "categorias": []
+        },
+        {
+            "titulo": "Noticia de prueba",
+            "subtitulo": "noticia de prueba",
+            "cuerpo": "",
+            "fecha": "",
+            "imagenes": ["https://i.ytimg.com/vi/MUDpHuW5PAQ/maxresdefault.jpg"],
+            "epigrafes": [],
+            "autores": [],
+            "categorias": []
+        }
+    ]
+}
