@@ -175,113 +175,12 @@ function imprimirDibujo() { //imprime un dibujo hecho en ascii.
 }
 let palabra;
 
+let botonUltimasNoticias = document.getElementById("watch-last-notice");
+botonUltimasNoticias.addEventListener("click", function() {
+    traerUltimasNoticias(mostrarEnCarrusel);
+});
 
-
-function recibirPalabras(palabraUno, palabraDos) {
-    let palabraConcatenada = palabraUno + palabraDos;
-    console.log(palabraConcatenada);
-
-}
-
-function enviarNodo() {
-    let nodo = document.getElementById("header");
-    recibirNodo(nodo);
-}
-
-function recibirNodo(nodo) {
-    console.log(nodo);
-}
-
-function concatenarPractica() {
-    let hello = "Hello";
-    let world = "Word";
-    let epicPhrase = hello + ' ' + world;
-    console.log(epicPhrase);
-
-}
-
-function concatenarPractica2(palabra1, palabra2) {;
-    let epicPhrase2 = `${palabra1} ${palabra2}`; //ecmascript6
-    console.log(epicPhrase2);
-}
-
-function putoApartePractica3() {
-    let lorem = "Hola que tal como andas \n todo bien?";
-    console.log(lorem);
-}
-
-function puntoApartePractica4() {
-    let lorem = `hola que tal como andas   
-    todo bien?`; //ecmasscript6
-}
-
-function contanteCambiar() {
-    const a = 'b';
-    a = 'a';
-}
-
-function practicaObjetos() {
-    const personaje1 = {
-        salud: 1300,
-        mana: 800,
-        dañoAtaque: 200,
-        nombre: "Arthur",
-        raza: "Nordico",
-    };
-
-
-}
-const personaje2 = {
-    salud: 1300,
-    mana: 800,
-    dañoAtaque: 200,
-    nombre: "Arthur",
-    raza: "Nordico",
-}
-
-function concatenarObjeto(objeto) {
-
-    console.log(`Este es el valor del atributo *Salud*:${objeto.salud}
-    Este es el valor del atributo *Mana*:${objeto.mana}
-    Este es el valor del atributo *Daño de Ataque*${objeto.dañoAtaque}`);
-
-
-}
-//concatenarObjeto(personaje2);
-
-
-
-
-function recibirParametros(a, b, callback) {
-    let suma = a + b;
-    callback(suma);
-
-}
-
-function mostrarEnPantalla(mostrar) {
-    console.log(mostrar);
-
-}
-
-function enviarParametros(valor1, valor2, valor3, operar, mostrar) {
-    let objeto = {
-        numero1: valor1,
-        numero2: valor2,
-        numero3: valor3,
-    };
-    operar(objeto, mostrar);
-}
-
-function operarObjeto(objeto, mostrar) {
-    let suma = objeto.numero1 + objeto.numero2 + objeto.numero3;
-    let resta = objeto.numero1 - objeto.numero2 - objeto.numero3;
-    let concatenar = `${objeto.numero1} ${objeto.numero2} ${objeto.numero3}`;
-    mostrar(`La suma es: ${suma}
-La resta es: ${resta}
-Concatenados: ${concatenar} `);
-}
-
-function traerNoticias(callback) {
+function traerUltimasNoticias(callback) {
     let url = "http://localhost:8000";
     let xhttp;
     xhttp = new XMLHttpRequest();
@@ -298,7 +197,6 @@ function traerNoticias(callback) {
 }
 
 function mostrarEnCarrusel({ noticias }) {
-    console.log(noticias);
 
     noticias.forEach((elemento, index) => {
         if (index == 0) {
@@ -310,7 +208,6 @@ function mostrarEnCarrusel({ noticias }) {
                     <p>${elemento.subtitulo}</p>
                 </div>
             </div>`;
-            console.log("hola")
 
         } else {
             document.getElementById("carrusel").innerHTML += `<div class="carousel-item" >
@@ -325,12 +222,8 @@ function mostrarEnCarrusel({ noticias }) {
 
 
     });
-    //document.getElementById("carrusel-principal").innerHTML = `<img src="${noticias[0].imagenes[0]}" class="d-block w-100" alt="...">`;
-    //document.getElementById("carrusel-secundario").innerHTML = `<img src="${noticias[1].imagenes[0]}" class="d-block w-100" alt="...">`;
-    //document.getElementById("carrusel-terciario").innerHTML = `<img src="${noticias[2].imagenes[0]}" class="d-block w-100" alt="...">`;
-
-
 }
+
 
 
 

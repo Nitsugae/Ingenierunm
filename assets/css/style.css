@@ -78,3 +78,7 @@ body {
         display: flex;
     }
 }
+
+.fondo-fuente-carrusel {
+    background-color: black;
+}
