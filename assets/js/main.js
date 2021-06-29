@@ -181,7 +181,7 @@ botonUltimasNoticias.addEventListener("click", function() {
 });
 
 function traerUltimasNoticias(callback) {
-    let url = "http://localhost:8000";
+    let url = "https://nitsugae.github.io/noticias/noticia.json";
     let xhttp;
     xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
