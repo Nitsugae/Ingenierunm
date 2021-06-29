@@ -1,5 +1,5 @@
 :root {
-    --primary: #1f2d7c;
+    --primary: #278fcc;
     --light: #ffffff;
     --grey: #efefef;
 }
@@ -36,8 +36,12 @@ body {
     zoom: 1.1;
 }
 
+#sidebar-container-responsive {
+    display: none;
+}
+
 #sidebar-container {
-    min-height: 5vh;
+    min-height: 100vh;
 }
 
 #sidebar-container .logo {
@@ -64,4 +68,13 @@ body {
 
 .stat {
     border-right: 1px solid var(--grey);
+}
+
+@media (max-width: 768px) {
+    #sidebar-container {
+        display: none;
+    }
+    #sidebar-container-responsive {
+        display: flex;
+    }
 }
