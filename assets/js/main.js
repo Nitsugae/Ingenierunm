@@ -181,7 +181,7 @@ botonUltimasNoticias.addEventListener("click", function() {
 });
 
 function traerUltimasNoticias(callback) {
-    let url = "https://nitsugae.github.io/noticias/noticia.json";
+    let url = "http://localhost:8000";
     let xhttp;
     xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
@@ -201,7 +201,7 @@ function mostrarEnCarrusel({ noticias }) {
     noticias.forEach((elemento, index) => {
         if (index == 0) {
 
-            document.getElementById("carrusel").innerHTML = `<div class="carousel-item active" >
+            document.getElementById("carrusel").innerHTML = `<div class="carousel-item active w-100" >
             <img src="${elemento.imagenes[0]}" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block fondo-fuente-carrusel">
                     <h5>${elemento.titulo}</h5>
@@ -210,7 +210,7 @@ function mostrarEnCarrusel({ noticias }) {
             </div>`;
 
         } else {
-            document.getElementById("carrusel").innerHTML += `<div class="carousel-item" >
+            document.getElementById("carrusel").innerHTML += `<div class="carousel-item w-100" >
         <img src="${elemento.imagenes[0]}" class="d-block w-100" alt="...">
         <div class="carousel-caption d-none d-md-block fondo-fuente-carrusel" >
                     <h5>${elemento.titulo}</h5>

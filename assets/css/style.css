@@ -2,10 +2,12 @@
     --primary: #278fcc;
     --light: #ffffff;
     --grey: #efefef;
+    --text: #278fcc;
+    --display: none;
+    --footer: #2486BF;
 }
 
 body {
-    overflow: hidden;
     font-family: 'Rubik', sans-serif;
     font-weight: 300;
     color: var(--primary);
@@ -62,11 +64,15 @@ body {
 
 #content {
     overflow-y: auto;
-    height: 100vh;
+    height: auto;
     padding-bottom: 5rem;
 }
 
-.stat {
+.color-text {
+    color: var(--text);
+}
+
+.separar {
     border-right: 1px solid var(--grey);
 }
 
@@ -77,8 +83,32 @@ body {
     #sidebar-container-responsive {
         display: flex;
     }
+    .separar {
+        border: 0;
+    }
+    #card-carousel-container {
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 1088px) {
+    #card-carousel-container {
+        width: 90% !important;
+    }
+}
+
+#card-carousel-container {
+    width: 70%;
 }
 
 .fondo-fuente-carrusel {
-    background-color: black;
+    background-color: var(--primary);
+}
+
+footer {
+    background-color: #23495f;
+}
+
+.footer-color {
+    background-color: #2486BF;
 }
