@@ -1,30 +1,30 @@
 {
     "noticias": [{
-            "titulo": "Robot Garfield",
-            "subtitulo": "aguante robot Garfield",
+            "titulo": "Super-Conductores",
+            "subtitulo": "Levitación magnetica y autoinducción",
             "cuerpo": "",
             "fecha": "",
-            "imagenes": ["https://i.redd.it/462ki8kafd651.jpg"],
+            "imagenes": ["https://images.unsplash.com/photo-1617396900799-f4ec2b43c7ae?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"],
             "epigrafes": [],
             "autores": [],
             "categorias": []
         },
         {
-            "titulo": "El sabor guaraná es un invento de la CIA",
-            "subtitulo": "fuente: Universidad del Triangulo de las vermudas",
+            "titulo": "El nuevo lapiz de Apple",
+            "subtitulo": "Ergonomia e innovacion a la cabeza",
             "cuerpo": "",
             "fecha": "",
-            "imagenes": ["https://www.axahealthkeeper.com/wp-content/uploads/2019/08/Guarana-propiedades-y-contraindicaciones.jpg"],
+            "imagenes": ["https://images.unsplash.com/photo-1543198061-6447314a6164?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"],
             "epigrafes": [],
             "autores": [],
             "categorias": []
         },
         {
-            "titulo": "Noticia de prueba",
-            "subtitulo": "noticia de prueba",
+            "titulo": "Airpods",
+            "subtitulo": "El futuro en tus oidos",
             "cuerpo": "",
             "fecha": "",
-            "imagenes": ["https://i.ytimg.com/vi/MUDpHuW5PAQ/maxresdefault.jpg"],
+            "imagenes": ["https://images.unsplash.com/photo-1623998021451-306e52f35634?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"],
             "epigrafes": [],
             "autores": [],
             "categorias": []

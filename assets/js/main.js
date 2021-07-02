@@ -178,7 +178,7 @@ traerUltimasNoticias(mostrarEnCarrusel);
 
 
 function traerUltimasNoticias(callback) {
-    let url = "https://nitsugae.github.io/noticias/noticia.json";
+    let url = "http://localhost:8000";
     let xhttp;
     xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
@@ -198,18 +198,18 @@ function mostrarEnCarrusel({ noticias }) {
     noticias.forEach((elemento, index) => {
         if (index == 0) {
 
-            document.getElementById("carrusel").innerHTML = `<div class="carousel-item active w-100" >
-            <img src="${elemento.imagenes[0]}" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block fondo-fuente-carrusel rounded">
+            document.getElementById("carrusel").innerHTML = `<div class="carousel-item active h-50" >
+            <img src="${elemento.imagenes[0]}" class="d-block w-100 h-50" style="height:500px !important; object-fit:cover !important; object-position:bottom!important ;" alt="...">
+            <div class="carousel-caption d-none d-md-block fondo-fuente-carrusel rounded" id="carousel-description">
                     <h5>${elemento.titulo}</h5>
                     <p>${elemento.subtitulo}</p>
                 </div>
             </div>`;
 
         } else {
-            document.getElementById("carrusel").innerHTML += `<div class="carousel-item w-100" >
-        <img src="${elemento.imagenes[0]}" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block fondo-fuente-carrusel rounded" >
+            document.getElementById("carrusel").innerHTML += `<div class="carousel-item w-100 h-50" >
+        <img src="${elemento.imagenes[0]}" class="d-block w-100 h-50" style="height:500px !important;object-fit:cover !important; object-position:bottom!important;" alt="...">
+        <div class="carousel-caption d-none d-md-block fondo-fuente-carrusel rounded" id="carousel-description" >
                     <h5>${elemento.titulo}</h5>
                     <p>${elemento.subtitulo}</p>
                 </div>
@@ -223,7 +223,7 @@ function mostrarEnCarrusel({ noticias }) {
 traerUltimosAportes(mostrarCartas);
 
 function traerUltimosAportes(callback) {
-    let url = "https://nitsugae.github.io/aportes/apunte.json";
+    let url = "http://localhost:5000";
     let xhttp;
     xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {

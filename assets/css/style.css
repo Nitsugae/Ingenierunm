@@ -13,6 +13,10 @@ body {
     color: var(--primary);
 }
 
+.container-nav {
+    z-index: 20;
+}
+
 .non-decoration {
     text-decoration: none;
 }
@@ -46,12 +50,24 @@ body {
     min-height: 100vh;
 }
 
-#sidebar-container .logo {
-    padding: .875rem 1.25rem;
+#sidebar-container {
+    padding: .875rem 12rem 0.875rem 0rem;
+}
+
+#logo {
+    padding-left: 1rem;
 }
 
 #sidebar-container .menu {
     width: auto;
+}
+
+#sidebar-items {
+    margin-top: 1rem;
+}
+
+#sidebar-container .menu a {
+    margin-left: 0;
 }
 
 #btn-search {
@@ -97,12 +113,15 @@ body {
     }
 }
 
-#card-carousel-container {
-    width: 70%;
-}
+#card-carousel-container {}
 
 .fondo-fuente-carrusel {
     background-color: var(--primary);
+}
+
+#carousel-description {
+    width: 50% !important;
+    margin: auto;
 }
 
 footer {
