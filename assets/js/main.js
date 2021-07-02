@@ -223,7 +223,7 @@ function mostrarEnCarrusel({ noticias }) {
 traerUltimosAportes(mostrarCartas);
 
 function traerUltimosAportes(callback) {
-    let url = "https://nitsugae.github.io/aportes/apuntes.json";
+    let url = "https://nitsugae.github.io/aportes/apunte.json";
     let xhttp;
     xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
