@@ -174,14 +174,11 @@ function imprimirDibujo() { //imprime un dibujo hecho en ascii.
 
 }
 let palabra;
+traerUltimasNoticias(mostrarEnCarrusel);
 
-let botonUltimasNoticias = document.getElementById("watch-last-notice");
-botonUltimasNoticias.addEventListener("click", function() {
-    traerUltimasNoticias(mostrarEnCarrusel);
-});
 
 function traerUltimasNoticias(callback) {
-    let url = "https://nitsugae.github.io/noticias/noticia.json";
+    let url = "http://localhost:8000";
     let xhttp;
     xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
@@ -203,7 +200,7 @@ function mostrarEnCarrusel({ noticias }) {
 
             document.getElementById("carrusel").innerHTML = `<div class="carousel-item active w-100" >
             <img src="${elemento.imagenes[0]}" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block fondo-fuente-carrusel">
+            <div class="carousel-caption d-none d-md-block fondo-fuente-carrusel rounded">
                     <h5>${elemento.titulo}</h5>
                     <p>${elemento.subtitulo}</p>
                 </div>
@@ -212,7 +209,7 @@ function mostrarEnCarrusel({ noticias }) {
         } else {
             document.getElementById("carrusel").innerHTML += `<div class="carousel-item w-100" >
         <img src="${elemento.imagenes[0]}" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block fondo-fuente-carrusel" >
+        <div class="carousel-caption d-none d-md-block fondo-fuente-carrusel rounded" >
                     <h5>${elemento.titulo}</h5>
                     <p>${elemento.subtitulo}</p>
                 </div>
@@ -223,6 +220,43 @@ function mostrarEnCarrusel({ noticias }) {
 
     });
 }
+traerUltimosAportes(mostrarCartas);
+
+function traerUltimosAportes(callback) {
+    let url = "http://localhost:5000";
+    let xhttp;
+    xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            let aportes = JSON.parse(this.responseText);
+            callback(aportes);
+        }
+
+    };
+    xhttp.open("GET", url, true);
+    xhttp.send();
+
+}
+
+function mostrarCartas(aportes) {
+
+    for (let i = 0; i < 4; i++) {
+        document.getElementById("carts-collage").innerHTML += `<div class="col-lg-3 col-md-6 d-flex separar mt-3">
+            <div class="mx-auto d-flex id="single-card">
+                <div class="card"  style="width: 18rem;">
+                    <img src="${aportes.apuntes[i].imagenApunte}" class="card-img-top" alt="..." style="object-fit:cover !important;" >
+                    <div class="card-body" >
+                        <h5 class="card-title">${aportes.apuntes[i].nombre}</h5>
+                        <p class="card-text">Materia:${aportes.apuntes[i].apunteMateria}</p>
+                        <a href="#" class="btn btn-primary">Ver</a>
+                    </div>
+                </div>
+            </div>
+        </div>`
+    }
+
+}
+
 
 
 

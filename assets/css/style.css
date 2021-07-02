@@ -112,3 +112,11 @@ footer {
 .footer-color {
     background-color: #2486BF;
 }
+
+#single-card:hover {
+    transform: scale(1.1, 1);
+}
+
+#card-container:hover {
+    transform: scale(1.1, 1);
+}
