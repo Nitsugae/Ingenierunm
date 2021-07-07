@@ -81,7 +81,8 @@ body {
 #content {
     overflow-y: auto;
     height: auto;
-    padding-bottom: 5rem;
+    padding-bottom: 0rem;
+    min-height: 100vh;
 }
 
 .color-text {
@@ -112,8 +113,6 @@ body {
         width: 90% !important;
     }
 }
-
-#card-carousel-container {}
 
 .fondo-fuente-carrusel {
     background-color: var(--primary);
