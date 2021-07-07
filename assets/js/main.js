@@ -178,7 +178,7 @@ traerUltimasNoticias(mostrarEnCarrusel);
 
 
 function traerUltimasNoticias(callback) {
-    let url = "https://nitsugae.github.io/noticias/noticia.json";
+    let url = "http://localhost:8000";
     let xhttp;
     xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
@@ -223,7 +223,7 @@ function mostrarEnCarrusel({ noticias }) {
 traerUltimosAportes(mostrarCartas);
 
 function traerUltimosAportes(callback) {
-    let url = "https://nitsugae.github.io/aportes/apunte.json";
+    let url = "http://localhost:5000";
     let xhttp;
     xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
