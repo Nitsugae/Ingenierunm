@@ -1,7 +1,7 @@
 traerAportes(mostrarAportes);
 
 function traerAportes(callback) {
-    let url = "http://localhost:5000";
+    let url = "https://nitsugae.github.io/aportes/apunte.js";
     let xhttp;
     xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
